@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2C2E2E;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pac-man {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  fill: none;
+  stroke: #f4d146;
+  stroke-width: 50px;
+  stroke-dasharray: 157;
+  -webkit-animation: animate-mouth 0.7s ease-in-out infinite;
+          animation: animate-mouth 0.7s ease-in-out infinite;
+}
+
+@-webkit-keyframes animate-mouth {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    transform: rotate(0);
+  }
+  50% {
+    stroke-dashoffset: 39.25;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes animate-mouth {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    transform: rotate(0);
+  }
+  50% {
+    stroke-dashoffset: 39.25;
+    transform: rotate(45deg);
+  }
+}
+.eye {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 167px;
+  left: 204px;
+  border-radius: 50%;
+  background: #2c2e2e;
+  -webkit-animation: animate-eye 0.7s ease-in-out infinite;
+          animation: animate-eye 0.7s ease-in-out infinite;
+}
+
+@-webkit-keyframes animate-eye {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-6px, -3px, 0);
+  }
+}
+
+@keyframes animate-eye {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-6px, -3px, 0);
+  }
+}
+.coin-1,
+.coin-2,
+.coin-3,
+.coin-4 {
+  position: absolute;
+  top: 192.5px;
+  right: -20px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #f4d146;
+  -webkit-animation: animate-coin 0.7s linear infinite;
+          animation: animate-coin 0.7s linear infinite;
+}
+
+.coin-2 {
+  right: 30px;
+}
+
+.coin-3 {
+  right: 80px;
+}
+
+.coin-4 {
+  right: 130px;
+}
+
+@-webkit-keyframes animate-coin {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50px, 0, 0);
+  }
+}
+
+@keyframes animate-coin {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50px, 0, 0);
+  }
+}
